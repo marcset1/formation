@@ -1,0 +1,29 @@
+/* Page du panier */
+.cart-page {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Résumé de la commande */
+.order-summary {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Formulaire client */
+.customer-form .form-group {
+    margin-bottom: 15px;
+}
+
+.customer-form label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
