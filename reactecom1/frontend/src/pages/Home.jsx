@@ -1,43 +1,54 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 import ProductCard from '../components/ProductCard';
 
-const products = [
-  {
-    id: 1,
-    name: 'Produit 1',
-    description: 'Un excellent produit de qualité supérieure.',
-    price: 20,
-    image: '/imagesp/front1.jpg',
-  },
-  {
-    id: 2,
-    name: 'Produit 2',
-    description: 'Idéal pour votre quotidien.',
-    price: 30,
-    image: '/imagesp/front2.jpg',
-  },
-  {
-    id: 3,
-    name: 'Produit 3',
-    description: 'Un produit innovant pour vous.',
-    price: 25,
-    image: '/images/produit3.jpg',
-  },
-];
-
 const Home = () => {
+  const [products, setProducts] = useState([]); // État pour stocker les produits
+  const [loading, setLoading] = useState(true); // État pour gérer le chargement
+  const [error, setError] = useState(null); // État pour gérer les erreurs
+
+  // Appeler l'API pour récupérer les produits
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/api/products/all');
+        setProducts(response.data); // Met à jour l'état avec les produits récupérés
+        setLoading(false);
+      } catch (err) {
+        console.error('Erreur lors de la récupération des produits :', err);
+        setError('Impossible de récupérer les produits');
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
+  // Affichage en cas de chargement ou d'erreur
+  if (loading) {
+    return <p>Chargement des produits...</p>;
+  }
+
+  if (error) {
+    return <p>{error}</p>;
+  }
+
   return (
     <div>
-      {products.map((product) => (
-        <div key={product.id} className="mb-4">
-          <ProductCard
-            image={product.image}
-            name={product.name}
-            description={product.description}
-            price={product.price}
-          />
-        </div>
-      ))}
+      <h1>Nos Produits</h1>
+      <div className="row">
+        {products.map((product) => (
+          <div key={product.idproduit} className="col-md-4 mb-4">
+            <ProductCard
+            	id={product.idproduit}
+              image="/imagesp/front1.jpg" // Image en dur
+              name={product.libelle}
+              description={product.descriptions}
+              price={product.prix}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

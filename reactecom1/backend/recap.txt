@@ -1,0 +1,629 @@
+# trace des commandes jusqu'au 15_03_2025 : history > recap.txt
+
+    1  scrcpy
+    2  sudo apt install scrcpy
+    3  nano done.txt
+    4  nano todo.txt
+    5  nano done.txt
+    6  nano onlist.txt
+    7  wine
+    8  sudo apt install wine
+    9  df
+   10  exit
+   11  sudo Ventoy2Disk.sh -i /dev/sdb1 
+   12  ./Ventoy2Disk.sh -i /dev/sdb1 
+   13  ./Ventoy2Disk.sh -i /dev/sdb
+   14  sudo ./Ventoy2Disk.sh -i /dev/sdb
+   15  sudo sh ./Ventoy2Disk.sh -i /dev/sdb
+   16  ls
+   17  ls -l
+   18  sudo chmod +x *
+   19  ls -l
+   20  cd ~
+   21  clear
+   22  df
+   23  dfclear
+   24  clear
+   25  sudo apt update
+   26  sudo apt upgrade
+   27  sudo apt install wine
+   28  workbench
+   29  sudo apt install mysql-workbench-community
+   30  sudo snap install mysql-workbench-community
+   31  cursor
+   32  mysql
+   33  sudo apt install mysql-client-core-8.0
+   34  mysql
+   35  mysql -u root
+   36  sudo systemctl status mysql
+   37  sudo apt install mysql-server
+   38  mysql -u root -p
+   39  mysql -u root
+   40  nano suivi.txt
+   41  sudo mysql-workbench-community 
+   42  scrcpy
+   43  ls -l
+   44  nano how.txt
+   45  sudo apt install libfuse2
+   46  nano how.txt 
+   47  ./cursor-0.44.11x86_64.AppImage 
+   48  sudo apt install memtestter
+   49  sudo apt install memtester
+   50  memtester 4096 1
+   51  memtester 1000 1
+   52  memtester 256 1
+   53  ls -la
+   54  sudo chmod +x cursor-0.44.11x86_64.AppImage 
+   55  nano how.txt 
+   56  ./cursor-0.44.11x86_64.AppImage 
+   57  sudo apt install scrcpy
+   58  sudo apt update
+   59  sudo apt install virtualbox
+   60  cursor ai
+   61  cursor-ai
+   62  cursor
+   63  apt install cursor
+   64  ls -la
+   65  ./installer.sh 
+   66  code .
+   67  snap remove code 
+   68  javac Main.java Point.java 
+   69  sudo apt install default-jdk
+   70  sudo apt install openjdk-21-jdk-headless
+   71  sudo apt install openjdk-8-jdk-headless
+   72  javac Main.java Point.java 
+   73  javac Point.java 
+   74  ls
+   75  ./Point
+   76  java Point 
+   77  javac Main.java 
+   78  java Main 
+   79  cd ../exercice2/
+   80  clear
+   81  javac Main.java PointCol.java 
+   82  javac PointCol.java 
+   83  export CLASSPATH=$CLASSPATH:/home/sachasmart/Documents/workspace/campus/departement/niveau3/inf331/dr_monthe/td
+   84  CLASSPATH
+   85  $PATH
+   86  $CLASSPATH
+   87  $CLASSPATH .
+   88  javac PointCol.java 
+   89  scrcpy
+   90  java
+   91  sudo apt install default-jre
+   92  sudo apt install openjdk-21-headless
+   93  sudo apt install openjdk-21
+   94  sudo apt install openjdk-21-jre-headless
+   95  sudo apt install openjdk-8-jre-headless
+   96  python3 transform_load.py 
+   97  python3 main.py 
+   98  pip install mysql-connector-python
+   99  sudo apt install python3-pip
+  100  sudo apt update 
+  101  sudo apt install python3-pip
+  102  pip install mysql-connector-python
+  103  python3 main.py 
+  104  mysql -u sacha -p
+  105  python3 main.py 
+  106  mysql -u sacha -p
+  107  python3 main.py 
+  108  mysql -u sacha -p
+  109  python3 main.py 
+  110  mysql -u sacha -p
+  111  python3 main.py 
+  112  mysql -u sacha -p
+  113  python3 main.py 
+  114  mysql -u sacha -p
+  115  python3 main.py 
+  116  mysql -u sacha -p
+  117  python3 main.py 
+  118  mysql -u sacha -p
+  119  scrcpy
+  120  ls
+  121  git init .
+  122  sudo apt install git
+  123  sudo rm -R google/ PostgreSQL/
+  124  git config --global user.name "marcset1"
+  125  git config --global user.email "dvisalla2@gmail.com"
+  126  git add .
+  127  git commit -m "premier projet sur le BI"
+  128  git remote add origin https://github.com/marcset1/workspace.git
+  129  git push -u origin main
+  130  git push -u origin master
+  131  mysql -u sacha -p projetrecsysdb
+  132  mysql -u root -p
+  133  sudo mysql -u root
+  134  scrcpy
+  135  mysqldump -u sacha -p projetrecsysdb > projetrecsysdb.sql
+  136  mysqldump -u root -p projetrecsysdb > projetrecsysdb.sql
+  137  mysqldump -u root -p projetrecsysdb --skip-tablespaces > projetrecsysdb.sql
+  138  sudo mysqldump -u root -p projetrecsysdb  > projetrecsysdb.sql
+  139  ls
+  140  mysql -u root -p
+  141  git push origin master
+  142  git pull
+  143  git-pull(1)
+  144  man git-pull(1)
+  145  man git-pull
+  146  git branch
+  147  git branch --set-upstream-to=origin/master
+  148  git pull
+  149  git branch --set-upstream-to=origin/main
+  150  git pull
+  151  git config pull.rebase false
+  152  git pull
+  153  git checkout inf351
+  154  git checkout master
+  155  git rebase master
+  156  git add .
+  157  git commit -m "mise en ligne du projet3 inf351-BI"
+  158  git push origin master
+  159  git add .
+  160  git commit -m "mise en ligne du projet3 inf351-BI"
+  161  git pull
+  162  git merge --allow-unrelated-histories master
+  163  git pull
+  164  git push -f -u origin main
+  165  git push -f -u origin master
+  166  python3 main.py 
+  167  git init
+  168  git config --global init.defaultBranch main
+  169  typora
+  170  sudo snap install typora
+  171  typora readme.md 
+  172  pip freeze > requirements.txt
+  173  python -v
+  174  python --v
+  175  python
+  176  python3 --v
+  177  python3 -v
+  178  python3 
+  179  pip
+  180  pip -v
+  181  pip --v
+  182  pip --version
+  183  latex
+  184  sudo apt install texlive-latex-recommended
+  185  texstudio
+  186  sudo apt install texstudio
+  187  talend
+  188  scrcpy
+  189  df
+  190  sudo chown 777 *
+  191  ls -l
+  192  ls -l
+  193  sudo chmod u 777 *.pdf
+  194  sudo chmod u+x *.pdf
+  195  ls -l
+  196  sudo chmod 777 *
+  197  df
+  198  ./Ventoy2Disk.sh -i -r 2048 /dev/sdb 
+  199  sudo ./Ventoy2Disk.sh -i -r 2048 /dev/sdb 
+  200  sudo gparted
+  201  scrcpy
+  202  sudo cp '/home/sachasmart/Downloads/eNSP/reseau.zip' .
+  203  sudo apt-get install boot-repair
+  204  sudo snap install boot-repair
+  205  sudo apt-get install grub-customizer
+  206  sudo apt update
+  207  sudo snap install boot-repair
+  208  sudo efibootmgr 
+  209  sudo efibootmgr -b 0002 -B
+  210  sudo efibootmgr -b 0004 -B
+  211  sudo apt-get install libimobiledevice-utils
+  212  sudo apt-get install airdroid
+  213  sudo apt-get install ifuse
+  214  idevicebackup
+  215  ifuse 
+  216  sudo snap install vlc
+  217  ./eNSP-Setup.com 
+  218  ls -l
+  219  cp -R '/home/sachasmart/Downloads/eNSP/reseau.zip' .
+  220  sudo cp -R '/home/sachasmart/Downloads/eNSP/reseau.zip' .
+  221  wine eNSP-Setup.com 
+  222  ls /media/
+  223  df
+  224  ls /media/
+  225  idevicebackup
+  226  idevicebackup2
+  227  cd ~
+  228  mkdir lynn
+  229  cd lynn/
+  230  idevicebackup -u H4RGT0DWPLJQ
+  231  idevicebackup backup -u H4RGT0DWPLJQ
+  232  idevicebackup backup -u H4RGT0DWPLJQ .
+  233  idevicebackup backup .
+  234  idevice -n 
+  235  idevicebackup -n
+  236  idevicebackup backup -n
+  237  idevicebackup backup -n .
+  238  idevicebackup2 -u -d backup --full .
+  239  idevicebackup2 -u -d H4RGT0DWPLJQ  backup --full .
+  240  ls -l
+  241  sudo chmod -R 777 *
+  242  scrcpy
+  243  idevicebackup2 -u -d H4RGT0DWPLJQ  backup --full .
+  244  scrcpy
+  245  ls -l
+  246  sudo chmod +x rapport1.pdf 
+  247  sudo chown
+  248  sudo chown --help
+  249  sudo cp '/home/sachasmart/Downloads/save_ubuntu2004_12012025/Documents/campus/INF311/dr_messi/rapport1.pdf' .
+  250  ls -l
+  251  sudo chown --help 
+  252  sudo chown /u root
+  253  sudo chown /sacha root
+  254  sudo chown /sachasmart root
+  255  sudo chown sachasmart root
+  256  clear
+  257  sudo chmod -R 777 *
+  258  ls -l
+  259  sudo chmod 777 *
+  260  sudo chmod -R 777 *
+  261  ls -l
+  262  sudo nano README.md 
+  263  sudo typora README.md 
+  264  sudo Typora README.md 
+  265  ls -l
+  266  group
+  267  Group
+  268  sudo chown -R sachasmart:sachasmart *
+  269  ls -l
+  270  sudo chmod -R 777 *
+  271  ls -l
+  272  matlab
+  273  scrcpy
+  274  matlab 
+  275  nano description_fichiers.txt
+  276  ls -l
+  277  sudo chmod +x local-9.2.0-linux.deb 
+  278  ./local-9.2.0-linux.deb 
+  279  local
+  280  sudo apt install local
+  281  local
+  282  exec local
+  283  matlab
+  284  nano exo1.txt 
+  285  nano exo2.txt
+  286  nano exo1.txt 
+  287  scrcpy
+  288  jdk --version
+  289  java --version
+  290  sudo ./install-tl 
+  291  ./TOS_DI-linux-gtk-x86
+  292  ls -l
+  293  sudo ./TOS_DI-linux-gtk-x86
+  294  sudo update-alternatives --config java
+  295  sudo update-alternatives --config javac
+  296  sudo ./TOS_DI-linux-gtk-x86
+  297  java --version 
+  298  xkill
+  299  killall java
+  300  ./TOS_DI-linux-gtk-x86.sh 
+  301  mysql --version 
+  302  sudo netstat -lpn | grep :3306
+  303  sudo grep :3306
+  304  top
+  305  talend
+  306  export MYSQL_SERVER_TIMEZONE='Africa/Douala'
+  307  sudo systemctl restart mysql.service 
+  308  sudo systemctl status mysql.service 
+  309  sudo nano /etc/mysql/my.cnf
+  310  sudo systemctl restart mysql.service 
+  311  journalctl -xeu mysqlql.service
+  312  sudo systemctl status mysql.service 
+  313  sudo systemctl restart mysql.service 
+  314  sudo nano /etc/mysql/my.cnf
+  315  sudo systemctl restart mysql.service 
+  316  mysql -u sacha -p 0000sacha0000
+  317  mysql -u sacha -p
+  318  mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root mysql
+  319  mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u sacha
+  320  mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u sacha -p
+  321  mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u sacha mysql -p
+  322  sudo mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root mysql
+  323  mysql -u sacha -p 0000sacha0000
+  324  mysql -u sacha -p 
+  325  sudo mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root mysql
+  326  sudo su
+  327  mysql -u sacha -p 
+  328  sudo systemctl restart mysql.service 
+  329  mysql -u sacha -p
+  330  ls /etc/mysql/
+  331  nano /etc/mysql/mysql.conf.d/
+  332  nano /etc/mysql/mysql.conf.d/mysql.cnf 
+  333  nano /etc/mysql/mysql.conf.d/mysqld.cnf 
+  334  ls /etc/mysql/conf.d/
+  335  whereis mysql.ini
+  336  whereis .ini
+  337  whereis mysql
+  338  scrcpy
+  339  mysql -u sacha -p
+  340  mysql -u sacha -p
+  341  docker
+  342  wine PBIDesktopSetup_x64.exe 
+  343  mysql -u sacha -p
+  344  killall java
+  345  sudo cp '/home/sachasmart/Documents/workspace/campus/departement/niveau3/inf351/projet/projet_inf351_bi_salla_2/talend' .
+  346  source ./env/bin/activate
+  347  python3 manage.py runserver
+  348  pip install django_select2
+  349  python3 manage.py runserver
+  350  pip install openpyxl
+  351  python3 manage.py runserver
+  352  sudo pip install fpdf
+  353  pip install fpdf
+  354  python3 manage.py runserver
+  355  python3 manage.py migrate
+  356  python3 manage.py runserver
+  357  django-admin 
+  358  django-admin -V
+  359  python3 manage.py createsuperuser
+  360  python3 manage.py runserver
+  361  pip install django
+  362  django-admin -V
+  363  python3 manage.py runserver
+  364  python3 manage.py createsuperuser
+  365  python3 manage.py runserver
+  366  scrcpy 
+  367  ~/.zshrc
+  368  ~/ .zshrc
+  369  ~/.zshrc
+  370  source ~/.zshrc
+  371  source ~/.bashrc 
+  372  sudo nano ~/.bashrc 
+  373  django --version
+  374  ./env/bin/activate
+  375  pip
+  376  pip --verions
+  377  pip -v
+  378  pip -V
+  379  django
+  380  pip show
+  381  pip show django
+  382  source ./env/bin/activate
+  383  pip show django
+  384  django-admin
+  385  pip freeze
+  386  pip install django
+  387  django -v
+  388  django
+  389  djanog-admin
+  390  python3 manage.py 
+  391  python3 manage.py runserver
+  392  pip freeze
+  393  pip install matplotlib
+  394  python3 manage.py runserver
+  395  pip install plotly
+  396  python3 manage.py runserver
+  397  pip install pandas
+  398  python3 manage.py runserver
+  399  python3 manage.py makemigrations
+  400  python3 manage.py migrate
+  401  python3 manage.py runserver
+  402  create superuser 
+  403  django-admin create superuser 
+  404  export PATH=$PATH:/home/sachasmart/.local/bin
+  405  djano-admin
+  406  scrcpy
+  407  python3 manage.py runserver
+  408  django-admin 
+  409  python3 manage.py runserver
+  410  django-admin create superuser
+  411  django-admin createsuperuser
+  412  python3 manage.py createsuperuser
+  413  python3 manage.py runserver
+  414  php app.php 
+  415  php app.php 
+  416  php -v
+  417  php -a
+  418  clear
+  419  apt install php-mbstring unzip
+  420  sudo apt install php-mbstring unz
+  421  git -v
+  422  sudo curl -sS https://getcomposer.org/installer | php
+  423  apt install curl
+  424  sudo apt install curl
+  425  sudo curl -sS https://getcomposer.org/installer | php
+  426  sudo mv composer.phar /usr/local/bin/composer
+  427  composer -V
+  428  mkdir oc
+  429  cd oc/
+  430  composer require monolog/monolog
+  431  composer init
+  432  init
+  433  init --licence MIT
+  434  ls
+  435  sudo apt install php-cli 
+  436  ls
+  437  mkdir SOLID
+  438  cd SOLID/
+  439  clear
+  440  mkdir learn
+  441  nano learn/_install_php.txt
+  442  ls -l
+  443  sudo chmod +x facebook-2023-531-1-0.msixbundle 
+  444  ./facebook-2023-531-1-0.msixbundle 
+  445  wine facebook-2023-531-1-0.msixbundle 
+  446  source /env/bin/activate
+  447  source ./env/bin/activate
+  448  pip freeze
+  449  exit
+  450  source env/bin/activate
+  451  pip freeze\
+  452  pip freeze
+  453  pip freeze > requirements.txt
+  454  groups
+  455  docker
+  456  docker ps
+  457  sudo usermod -aG docker sachasmart 
+  458  docker ps
+  459  logout
+  460  exit
+  461  groups
+  462  sudo usermod -aG docker sachasmart 
+  463  groups
+  464  docker ps
+  465  exit
+  466  mkdir ecomerce-project
+  467  mkdir ecommerce-project
+  468  git init
+  469  ls
+  470  ls -l
+  471  ls -la
+  472  clear
+  473  cd reactjs1/
+  474  cd ecommerce-project/
+  475  git init 
+  476  git remote add origin https://github.com/marcset1/formation.git
+  477  nano .gitignore
+  478  cd ..
+  479  cd reactjs1/
+  480  cd ..
+  481  nano .gitignore
+  482  clear
+  483  git remote add origin https://github.com/marcset1/formation.git
+  484  git add ./reactjs1/
+  485  git status
+  486  git commit -m "Initial commit"
+  487  git add ./reactjs1/
+  488  git branch
+  489  git status
+  490  git reset --hard
+  491  git status
+  492  git add /reactjs1/
+  493  git add reactjs1/
+  494  git commit -m "Initial commit for reactjs-projects"
+  495  git reset
+  496  git status
+  497  git add
+  498  git checkout master
+  499  cd reactjs1/
+  500  mkdir reactecom1
+  501  git init
+  502  nano .gitignore
+  503  git add .
+  504  git status
+  505  git commit -m "Initial commit for my first react ecommerce site"
+  506  git push -u origin main
+  507  git remote add origin https://github.com/marcset1/formation.git
+  508  git push -u origin main
+  509  git status 
+  510  git push -v
+  511  git pull
+  512  git push -u origin main
+  513  git pull
+  514  git push -u origin main
+  515  git rebase
+  516  git rebase main
+  517  git merge
+  518  git merge origin/main 
+  519  git push -u -f origin main
+  520  git push -u -v origin main
+  521  ls
+  522  git add .
+  523  git commit -m *rebase*
+  524  mkdir reactecom1/ecommere-project
+  525  npx
+  526  sudo apt install npm
+  527  npx create-vite@latest frontend --template react
+  528  node -v
+  529  sudo npm install -g npm@latest
+  530  sudo apt update
+  531  npm -v
+  532  sudo npm install -g npm@latest
+  533  sudo apt install npm
+  534  nvm
+  535  nvm install node
+  536  sudo snap install nvm
+  537  wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
+  538  exit
+  539  nvm --version
+  540  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh
+  541  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+  542  nvm --version
+  543  exit
+  544  nvm --version
+  545  nvm install node
+  546  nvm install node 
+  547  nvm use node 
+  548  nvm ls
+  549  clear
+  550  npm run dev
+  551  scrcpy
+  552  npm run dev
+  553  npm run --host dev
+  554  npm run dev
+  555  sudo chmod 000 new1/
+  556  ls -l
+  557  sudo chmod 111  new1
+  558  ls -l
+  559  sudo chown root new1/
+  560  npm run
+  561  vite 
+  562  npm run dev
+  563  npm run build
+  564  npm run
+  565  ifconfig
+  566  systemctl status apache
+  567  sudo netstat -lpn | grep :80
+  568  ipconfig
+  569  ifconfig
+  570  scrcpy
+  571  nano orbite.py
+  572  python3 orbite.py 
+  573  nano oppenhaimer.py
+  574  python3 oppenhaimer.py 
+  575  npm build
+  576  npm run build
+  577  scrcpy
+  578  ls -l
+  579  sudo snap install telegram
+  580  npm -rf node_modules package-lock.json
+  581  rm -rf node_modules package-lock.json
+  582  npm install
+  583  npm run build
+  584  nodejs -v
+  585  node -v
+  586  npm install react react-dom
+  587  npm fund
+  588  npm install --save-dev vite
+  589  npm run build
+  590  npm install -g serve 
+  591  npm -s dist
+  592  serve -s dist
+  593  git remote add origin https://github.com/marcset1/formation.git
+  594  cd /home/sachasmart/devOps/reactjs
+  595  cd /home/sachasmart/devOps/
+  596  cd reactjs1/
+  597  ls
+  598  cd reactecom1/
+  599  ls
+  600  git pu
+  601  ls -la
+  602  cd ..
+  603  ls
+  604  ls -l
+  605  ls -la
+  606  git remote add origin https://github.com/marcset1/formation.git
+  607  git push -u -v origin main
+  608  ls
+  609  git add .
+  610  git commit - m "boutique v1"
+  611  git commit -m "boutique v1"
+  612  git push -u -v origin main
+  613  git add .
+  614  git commit -m "Le chemin de build ici est dist/: savoir que je n'avais pas a la version precedente, je croyais build/"
+  615  git push origin main
+  616  mkdir backend
+  617  cd backend/
+  618  npm init -y
+  619  npm install express mysql2 body-parser cors
+  620  npm install --save-dev nodemon
+  621  nano package.json 
+  622  mkdir controllers models routes
+  623  npm install axios
+  624  today=$(date +%Y-%m-%d)
+  625  grep "$today" ~/.bash_history > recapitulatif_commandes_jour_15_03_2025.txt
+  626  history
+  627  history > recap.txt

@@ -23,7 +23,7 @@ const ProductCard = ({ id, image, name, description, price }) => {
     if (quantity > 0) {
       // Redirige vers /cart avec des données de commande
       navigate('/cart', {
-        state: { id, name, quantity, price, total: quantity * price },
+        state: { id, name, quantity, price, image, total: quantity * price },
       });
     } else {
       alert("Veuillez choisir une quantité avant de commander !");

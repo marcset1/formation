@@ -1,5 +1,6 @@
 /* Conteneur principal de la carte produit */
 .product-card {
+	width: 70vw;
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #fff;
