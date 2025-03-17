@@ -23,7 +23,7 @@ exports.validateOrder = (req, res) => {
 	- Produit : ${produit.libelle}
 	- Quantité : ${qte}
 	- Total : ${total}€
-	- Image : "https://devops-sachasmart-ventelivre.onrender.com" + ${image}
+	- Image : https://devops-sachasmart-ventelivre.onrender.com${image}
 
 	Mes coordonnées :
 	- Nom : ${nom} ${prenom}
