@@ -35,7 +35,7 @@ exports.getAllProducts = (req, res) => {
 	db.query(query, (err, results) => {
 	  if (err) throw err;
 	  console.error('recuperation des produits reussie');
-	  res.status(200).json(results);
+	  res.status(200).json(results.rows);
 	});
 
 };

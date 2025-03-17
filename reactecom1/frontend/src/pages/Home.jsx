@@ -11,7 +11,7 @@ const Home = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get(`https://ventelivre.onrender.com/api/products/all`);
+        const response = await axios.get('https://ventelivre.onrender.com/api/products/all');
         setProducts(response.data); // Met à jour l'état avec les produits récupérés
         setLoading(false);
       } catch (err) {
