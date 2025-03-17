@@ -11,7 +11,7 @@ const Home = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/products/all');
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/api/products/all`);
         setProducts(response.data); // Met à jour l'état avec les produits récupérés
         setLoading(false);
       } catch (err) {

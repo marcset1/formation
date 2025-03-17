@@ -18,7 +18,7 @@ const Cart = () => {
 
     if (name && phone && city) {
       try {
-        const response = await axios.post('http://localhost:5000/api/orders/validate', {
+        const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/orders/validate`, {
           nom: name,
           prenom: '', // Si tu as un champ prénom, utilise-le ici
           email: email,
