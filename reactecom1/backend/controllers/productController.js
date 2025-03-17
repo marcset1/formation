@@ -21,7 +21,7 @@ exports.addProduct = async (req, res) => {
 	// Exécute la requête avec les valeurs dynamiques
 	try {
 		await db.query(query, [libelle, descriptions, prix, qstock]);
-		res.status(201).json({ message: 'Produit ajouté avec succès.', productId: result.insertId});
+		res.status(201).json({ message: 'Produit ajouté avec succès.'});
 	} catch (err) {
 		console.error('Erreur lors de l\'ajout du produit :', err);
 		res.status(500).json({ error: 'Erreur interne du serveur.' });
