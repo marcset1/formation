@@ -30,7 +30,7 @@ exports.validateOrder = (req, res) => {
 	- Téléphone : ${tel}
 	- Ville : ${ville}`;
 
-		const whatsappUrl = `https://wa.me/00237671865401?text=${encodeURIComponent(message)}`;
+		const whatsappUrl = `https://wa.me/237671865401?text=${encodeURIComponent(message)}`;
 		res.status(200).json({ message: 'Commande validée avec succès !', whatsappUrl });
 	  });
 	};
