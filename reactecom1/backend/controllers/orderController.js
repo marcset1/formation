@@ -54,14 +54,14 @@ exports.validateOrder = (req, res) => {
       saveOrder(clientId);
     } else {
       // Ajouter un nouveau client
-      const insertClientQuery = 'INSERT INTO tbclient (nom, prenom, email, tel, ville) VALUES ($1, $2, $3, $4, $5)';
+      const insertClientQuery = 'INSERT INTO tbclient (nom, prenom, email, tel, ville) VALUES ($1, $2, $3, $4, $5) RETURNING idclient';
       db.query(insertClientQuery, [nom, prenom, email, tel, ville], (err, result) => {
         if (err) {
           console.error('Erreur lors de l\'ajout du client :', err);
           return res.status(500).json({ error: 'clientadd: Erreur interne du serveur.' });
         }
 
-        clientId = result.insertId;
+         clientId = result.rows[0].idclient;
         saveOrder(clientId);
       });
     }
