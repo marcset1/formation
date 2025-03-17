@@ -11,7 +11,7 @@ exports.validateOrder = (req, res) => {
 	  db.query(insertOrderQuery, [clientId, produit.idproduit, qte], (err, result) => {
 		if (err) {
 		  console.error('Erreur lors de l\'ajout de la commande :', err);
-		  return res.status(500).json({ error: 'Erreur interne du serveur.' });
+		  return res.status(500).json({ error: 'addcmd: Erreur interne du serveur.' });
 		}
 		else{
 			console.log("commande enregistree avec succes!");
@@ -43,7 +43,7 @@ exports.validateOrder = (req, res) => {
   db.query(clientCheckQuery, [email, tel], (err, results) => {
     if (err) {
       console.error('Erreur lors de la vérification du client :', err);
-      return res.status(500).json({ error: 'Erreur interne du serveur.' });
+      return res.status(500).json({ error: 'client-check: Erreur interne du serveur.' });
     }
 
     let clientId;
@@ -57,7 +57,7 @@ exports.validateOrder = (req, res) => {
       db.query(insertClientQuery, [nom, prenom, email, tel, ville], (err, result) => {
         if (err) {
           console.error('Erreur lors de l\'ajout du client :', err);
-          return res.status(500).json({ error: 'Erreur interne du serveur.' });
+          return res.status(500).json({ error: 'clientadd: Erreur interne du serveur.' });
         }
 
         clientId = result.insertId;
