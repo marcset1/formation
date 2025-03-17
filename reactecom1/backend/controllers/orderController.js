@@ -7,6 +7,7 @@ exports.validateOrder = (req, res) => {
 
 	// Fonction pour enregistrer la commande
 	const saveOrder = (clientId) => {
+		console.log("idproduit: ${produit.idproduit}, idclient: ${clientId}");
 	  const insertOrderQuery = 'INSERT INTO tbcommande (idclient_fk, idproduit_fk, datecommande, qtecommande) VALUES ($1, $2, NOW(), $3)';
 	  db.query(insertOrderQuery, [clientId, produit.idproduit, qte], (err, result) => {
 		if (err) {
