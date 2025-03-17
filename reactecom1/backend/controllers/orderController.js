@@ -7,7 +7,7 @@ exports.validateOrder = (req, res) => {
 
 	// Fonction pour enregistrer la commande
 	const saveOrder = (clientId) => {
-	  const insertOrderQuery = 'INSERT INTO tbcommande (idclient_fk, idproduit_fk, datecommande, qtecommande) VALUES (?, ?, NOW(), ?)';
+	  const insertOrderQuery = 'INSERT INTO tbcommande (idclient_fk, idproduit_fk, datecommande, qtecommande) VALUES ($1, $2, NOW(), $3)';
 	  db.query(insertOrderQuery, [clientId, produit.idproduit, qte], (err, result) => {
 		if (err) {
 		  console.error('Erreur lors de l\'ajout de la commande :', err);
@@ -53,7 +53,7 @@ exports.validateOrder = (req, res) => {
       saveOrder(clientId);
     } else {
       // Ajouter un nouveau client
-      const insertClientQuery = 'INSERT INTO tbclient (nom, prenom, email, tel, ville) VALUES (?, ?, ?, ?, ?)';
+      const insertClientQuery = 'INSERT INTO tbclient (nom, prenom, email, tel, ville) VALUES ($1, $2, $3, $4, $5)';
       db.query(insertClientQuery, [nom, prenom, email, tel, ville], (err, result) => {
         if (err) {
           console.error('Erreur lors de l\'ajout du client :', err);
