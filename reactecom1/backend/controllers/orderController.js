@@ -39,7 +39,7 @@ exports.validateOrder = (req, res) => {
   }
 
   // Vérifier si le client existe déjà (par email ou téléphone)
-  const clientCheckQuery = 'SELECT idclient FROM tbclient WHERE email = ? OR tel = ?';
+  const clientCheckQuery = 'SELECT idclient FROM tbclient WHERE email = $1 OR tel = $2;';
   db.query(clientCheckQuery, [email, tel], (err, results) => {
     if (err) {
       console.error('Erreur lors de la vérification du client :', err);
