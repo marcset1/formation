@@ -20,10 +20,10 @@ exports.validateOrder = (req, res) => {
 
 		// Envoi de la commande à WhatsApp
 		const message = `Bonjour, voici ma commande :
-	- Produit : ${produit.libellé}
+	- Produit : ${produit.libelle}
 	- Quantité : ${qte}
 	- Total : ${total}€
-	- Image : ${image}
+	- Image : "https://devops-sachasmart-ventelivre.onrender.com" + ${image}
 
 	Mes coordonnées :
 	- Nom : ${nom} ${prenom}
