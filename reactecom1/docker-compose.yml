@@ -1,0 +1,93 @@
+version: '3'
+
+# Déclaration du réseau
+networks:
+  ventelivre:
+    driver: bridge
+
+services:
+  # Service MySQL (Base de données)
+  bdlivre:
+    image: mysql:5.7
+    container_name: mysql_bdlivre
+    restart: always
+    environment:
+      MYSQL_DATABASE: bdventelivre
+      MYSQL_USER: sacha
+      MYSQL_PASSWORD: 0000sacha0000
+      MYSQL_ROOT_PASSWORD: root_password
+    ports:
+      - "3307:3306" # Expose le port MySQL
+    volumes:
+      - bdlivre_data:/var/lib/mysql
+    networks:
+      - ventelivre
+
+  # Service Backend (Node.js) de l'application principale
+  backend:
+    build:
+      context: ./backend # Chemin vers le Dockerfile du backend
+    container_name: node_backend
+    restart: always
+    ports:
+      - "5000:5000" # Expose le port 5000 pour le backend
+    environment:
+      DB_HOST: bdlivre # Utilise le nom du service MySQL comme hôte
+      DB_PORT: 3306
+      DB_NAME: bdventelivre
+      DB_USER: sacha
+      DB_PASSWORD: 0000sacha0000
+    depends_on:
+      - bdlivre # Assure que la base de données est prête avant le démarrage du backend
+    networks:
+      - ventelivre
+
+  # Service Frontend (React) de l'application principale
+  frontend:
+    build:
+      context: ./frontend # Chemin vers le Dockerfile du frontend
+    container_name: react_frontend
+    restart: always
+    ports:
+      - "80:80" # Expose le port 80 pour le frontend
+    depends_on:
+      - backend # Assure que le backend est prêt avant le démarrage du frontend
+    networks:
+      - ventelivre
+
+  # Service Backend (Node.js) de l'application gestion
+  gestion_backend:
+    build:
+      context: ./gestion/backend # Chemin vers le Dockerfile du backend de gestion
+    container_name: gestion_node_backend
+    restart: always
+    ports:
+      - "5001:5001" # Expose un port différent pour le backend de gestion
+    environment:
+      DB_HOST: bdlivre # Utilise le même service MySQL
+      DB_PORT: 3306
+      DB_NAME: bdventelivre
+      DB_USER: sacha
+      DB_PASSWORD: 0000sacha0000
+      DB_DIALECT: mysql
+    depends_on:
+      - bdlivre # Assure que la base de données est prête avant le démarrage du backend
+    networks:
+      - ventelivre
+
+  # Service Frontend (React) de l'application gestion
+  gestion_frontend:
+    build:
+      context: ./gestion/frontend # Chemin vers le Dockerfile du frontend de gestion
+    container_name: gestion_react_frontend
+    restart: always
+    ports:
+      - "81:80" # Expose un port différent pour le frontend de gestion
+    depends_on:
+      - gestion_backend # Assure que le backend de gestion est prêt avant le démarrage du frontend
+    networks:
+      - ventelivre
+
+# Volumes persistants
+volumes:
+  bdlivre_data:
