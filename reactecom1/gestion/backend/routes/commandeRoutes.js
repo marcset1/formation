@@ -2,6 +2,8 @@ const express = require('express');
 const Commande = require('../models/Commande');
 const Achat = require('../models/Achat');
 const Produit = require('../models/Produit');
+const Client = require('../models/Client');
+
 const router = express.Router();
 
 
