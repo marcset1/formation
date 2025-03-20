@@ -7,12 +7,11 @@ exports.validateOrder = (req, res) => {
 
 	// Fonction pour enregistrer la commande
 	const saveOrder = (clientId) => {
-		console.log(`idproduit: ${produit.idproduit}, idclient: ${clientId}`);
-	  const insertOrderQuery = 'INSERT INTO tbcommande (idclient_fk, idproduit_fk, datecommande, qtecommande) VALUES ($1, $2, NOW(), $3)';
+	  const insertOrderQuery = 'INSERT INTO tbcommandes (idclient_fk, idproduit_fk, datetimecommande, qtecommande) VALUES (?, ?, NOW(), ?)';
 	  db.query(insertOrderQuery, [clientId, produit.idproduit, qte], (err, result) => {
 		if (err) {
 		  console.error('Erreur lors de l\'ajout de la commande :', err);
-		  return res.status(500).json({ error: 'addcmd: Erreur interne du serveur.' });
+		  return res.status(500).json({ error: 'Erreur interne du serveur.' });
 		}
 		else{
 			console.log("commande enregistree avec succes!");
@@ -20,17 +19,17 @@ exports.validateOrder = (req, res) => {
 
 		// Envoi de la commande à WhatsApp
 		const message = `Bonjour, voici ma commande :
-	- Produit : ${produit.libelle}
+	- Produit : ${produit.libellé}
 	- Quantité : ${qte}
 	- Total : ${total}€
-	- Image : https://devops-sachasmart-ventelivre.onrender.com${image}
+	- Image : ${image}
 
 	Mes coordonnées :
 	- Nom : ${nom} ${prenom}
 	- Téléphone : ${tel}
 	- Ville : ${ville}`;
 
-		const whatsappUrl = `https://wa.me/237671865401?text=${encodeURIComponent(message)}`;
+		const whatsappUrl = `https://wa.me/00237671865401?text=${encodeURIComponent(message)}`;
 		res.status(200).json({ message: 'Commande validée avec succès !', whatsappUrl });
 	  });
 	};
@@ -40,11 +39,11 @@ exports.validateOrder = (req, res) => {
   }
 
   // Vérifier si le client existe déjà (par email ou téléphone)
-  const clientCheckQuery = 'SELECT idclient FROM tbclient WHERE email = $1 OR tel = $2;';
+  const clientCheckQuery = 'SELECT idclient FROM tbclients WHERE email = ? OR tel = ?';
   db.query(clientCheckQuery, [email, tel], (err, results) => {
     if (err) {
       console.error('Erreur lors de la vérification du client :', err);
-      return res.status(500).json({ error: 'client-check: Erreur interne du serveur.' });
+      return res.status(500).json({ error: 'Erreur interne du serveur.' });
     }
 
     let clientId;
@@ -54,14 +53,14 @@ exports.validateOrder = (req, res) => {
       saveOrder(clientId);
     } else {
       // Ajouter un nouveau client
-      const insertClientQuery = 'INSERT INTO tbclient (nom, prenom, email, tel, ville) VALUES ($1, $2, $3, $4, $5) RETURNING idclient';
+      const insertClientQuery = 'INSERT INTO tbclients (nom, prenom, email, tel, ville) VALUES (?, ?, ?, ?, ?)';
       db.query(insertClientQuery, [nom, prenom, email, tel, ville], (err, result) => {
         if (err) {
           console.error('Erreur lors de l\'ajout du client :', err);
-          return res.status(500).json({ error: 'clientadd: Erreur interne du serveur.' });
+          return res.status(500).json({ error: 'Erreur interne du serveur.' });
         }
 
-         clientId = result.rows[0].idclient;
+        clientId = result.insertId;
         saveOrder(clientId);
       });
     }

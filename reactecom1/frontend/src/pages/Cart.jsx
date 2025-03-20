@@ -18,7 +18,7 @@ const Cart = () => {
 
     if (name && phone && city) {
       try {
-        const response = await axios.post(`https://ventelivre.onrender.com/api/orders/validate`, {
+        const response = await axios.post(`http://localhost:5000/api/orders/validate`, {
           nom: name,
           prenom: '', // Si tu as un champ prénom, utilise-le ici
           email: email,
@@ -58,7 +58,7 @@ const Cart = () => {
           <h3>Résumé de la commande</h3>
           <p><strong>Produit :</strong> {order.name}</p>
           <p><strong>Quantité :</strong> {order.quantity}</p>
-          <p><strong>Total :</strong> {order.total} €</p>
+          <p><strong>Total :</strong> {order.total} FCFA</p>
         </div>
       ) : (
         <p>Aucun produit dans le panier.</p>

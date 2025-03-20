@@ -13,15 +13,15 @@ const Client = sequelize.define('tbclient', {
     allowNull: false,
   },
   prenom: {
-    type: DataTypes.TEXT, // Texte pour les descriptions longues
+    type: DataTypes.STRING, // Texte pour les descriptions longues
     allowNull: true,
   },
   email: {
-    type: DataTypes.FLOAT,
+    type: DataTypes.STRING,
     allowNull: false, // Prix par unité
   },
   tel: {
-    type: DataTypes.INTEGER, // Quantité en stock
+    type: DataTypes.STRING, // Quantité en stock
     allowNull: false,
   },
   ville: {
@@ -30,7 +30,6 @@ const Client = sequelize.define('tbclient', {
   }
 });
 
-};
 
 
 module.exports = Client;

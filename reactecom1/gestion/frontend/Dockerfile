@@ -1,4 +1,6 @@
 # Utilise une image officielle de Node.js pour construire le projet
+
+# Utilise une image officielle de Node.js pour construire le projet
 FROM node:latest AS build
 
 # Définir le répertoire de travail
@@ -7,9 +9,10 @@ WORKDIR /app
 # Copier les fichiers package.json et package-lock.json
 COPY package*.json ./
 
+RUN npm cache clean --force
+
 # Installer les dépendances
 RUN npm install -g npm@latest
-RUN npm cache clean --force
 RUN npm install
 
 # Copier tout le projet et construire le frontend

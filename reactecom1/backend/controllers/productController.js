@@ -1,7 +1,7 @@
 const db = require('../db');
 
 //add new product
-exports.addProduct = async (req, res) => {
+exports.addProduct = (req, res) => {
 
 	const {libelle, descriptions, prix, qstock} = req.body;
 	
@@ -13,29 +13,37 @@ exports.addProduct = async (req, res) => {
 	
 	}
 	
-	// Requête SQL d'insertion
-	const query = `
-	INSERT INTO tbproduit (libelle, descriptions, prix, qstock) 
-	VALUES ($1, $2, $3, $4)`;
-
-	// Exécute la requête avec les valeurs dynamiques
-	try {
-		await db.query(query, [libelle, descriptions, prix, qstock]);
-		res.status(201).json({ message: 'Produit ajouté avec succès.'});
-	} catch (err) {
-		console.error('Erreur lors de l\'ajout du produit :', err);
-		res.status(500).json({ error: 'Erreur interne du serveur.' });
-	}
+	const query = 'INSERT INTO tbproduits(libelle, descriptions, prix, qstock) VALUES (?, ?, ?, ?)';
+	db.query(query, [libelle, descriptions, prix, qstock], (err, result) => {
+	
+		if(err){
+		
+			console.error('Erreur: ajout du produit -> ', err);
+			return res.status(500).json({error: 'erreur interne du serveur.'});
+		
+		}
+		console.log('ajout du produit reussi');
+		res.status(201).json({message: 'Produit ajoute avec succes!', productId: result.insertId});
+	
+	});
 
 };
 
 //get all products
 exports.getAllProducts = (req, res) => {
-	const query = 'SELECT * FROM tbproduit';
+
+	const query = 'SELECT * FROM tbproduits';
 	db.query(query, (err, results) => {
-	  if (err) throw err;
-	  console.error('recuperation des produits reussie');
-	  res.status(200).json(results.rows);
+	
+		if(err){
+		
+			console.error('Erreur: getting all products -> ', err);
+			return res.status(500).json({error: 'Erreur du serveur.'});
+		
+		}
+		console.error('recuperation des produits reussie');
+		res.status(200).json(results);
+	
 	});
 
 };

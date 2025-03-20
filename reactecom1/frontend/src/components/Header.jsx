@@ -7,7 +7,7 @@ const Header = () => {
       {/* Barre de publicité */}
       <div className="bg-warning text-center py-2">
         <span className="text-dark font-weight-bold">
-          🚀 Promo : Livraison gratuite dès 50 € d'achat !
+          🚀 Promo : Livraison gratuite dès 10000 FCFA d'achat !
         </span>
       </div>
 
